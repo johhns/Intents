@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnLlamada = findViewById( R.id.btnLlamada ) ;
         btnMapa    = findViewById( R.id.btnMaps ) ;
         btnFoto    = findViewById( R.id.btnFoto ) ;
-        btnCorreo  = findViewById( R.id.btnLlamada ) ;
+        btnCorreo  = findViewById( R.id.btnCorreo ) ;
 
         btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnLlamada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity( new Intent( Intent.ACTION_CALL , Uri.parse( "tel:22728212" ) ) );
+                startActivity( new Intent( Intent.ACTION_DIAL , Uri.parse( "tel:22728212" ) ) );
             }
         });
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 correo.setType("text/plain");
                 correo.putExtra(Intent.EXTRA_SUBJECT,"Prueba de correo");
                 correo.putExtra(Intent.EXTRA_TEXT,"Este es un correo de prueba desde android studio") ;
-                correo.putExtra(Intent.EXTRA_EMAIL,new String[] { "johhns@hotmail.com","developer.johhns@gmail.com" }) ;
+                correo.putExtra(Intent.EXTRA_EMAIL,new String[]{"johhns@hotmail.com","developer.johhns@gmail.com"}) ;
                 startActivity(correo);
             }
         });
